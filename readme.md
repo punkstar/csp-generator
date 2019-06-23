@@ -15,3 +15,8 @@ This tool will generate a valid CSP header based on the resources currently bein
 To identify the resources that one or urls are serving then run the following. You may enter as many url arguments as you like, space separated.
 
     node ./bin/identify_resources.js https://www.nicksays.co.uk
+
+To build a CSP based on a resources JSON file (generate by `identify_resources.js`) pass to `build_csp.js` via `stdin`, for example:
+
+    node ./bin/identify_resources.js https://www.nicksays.co.uk > resources.json
+    node ./bin/build_csp < resources.json
